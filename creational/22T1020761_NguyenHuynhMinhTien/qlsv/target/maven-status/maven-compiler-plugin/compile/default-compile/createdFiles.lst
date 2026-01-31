@@ -1,0 +1,12 @@
+com\example\qlsv\entity\NganhDaoTao.class
+com\example\qlsv\Main.class
+com\example\qlsv\config\DatabaseInitializer.class
+com\example\qlsv\dao\GiangVienDAO.class
+com\example\qlsv\service\QuanLySinhVienService.class
+com\example\qlsv\dao\NganhDaoTaoDAO.class
+com\example\qlsv\entity\GiangVien.class
+com\example\qlsv\config\DatabaseConnection.class
+com\example\qlsv\entity\SinhVien.class
+com\example\qlsv\dao\SinhVienDAO.class
+com\example\qlsv\dao\KhoaDAO.class
+com\example\qlsv\entity\Khoa.class
