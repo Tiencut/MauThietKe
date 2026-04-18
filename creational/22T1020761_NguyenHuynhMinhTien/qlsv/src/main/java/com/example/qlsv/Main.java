@@ -19,7 +19,10 @@ public class Main {
         System.out.println("SinhVien:");
         service.getAllSinhVien().forEach(System.out::println);
 
-        System.out.println("\nKhoa:");
+        System.out.println("\nKhoa (lần 1):");
+        service.getAllKhoa().forEach(System.out::println);
+
+        System.out.println("\nKhoa (lần 2 - từ cache):");
         service.getAllKhoa().forEach(System.out::println);
 
         System.out.println("\nGiangVien:");
@@ -27,5 +30,15 @@ public class Main {
 
         System.out.println("\nNganhDaoTao:");
         service.getAllNganhDaoTao().forEach(System.out::println);
+
+        // Test caching cho tính điểm trung bình
+        System.out.println("\nĐiểm trung bình sinh viên ID 1 (lần 1):");
+        System.out.println(service.tinhDiemTrungBinh(1));
+
+        System.out.println("\nĐiểm trung bình sinh viên ID 1 (lần 2 - từ cache):");
+        System.out.println(service.tinhDiemTrungBinh(1));
+
+        System.out.println("\nĐiểm trung bình sinh viên ID 2 (lần đầu):");
+        System.out.println(service.tinhDiemTrungBinh(2));
     }
 }

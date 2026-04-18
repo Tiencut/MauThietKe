@@ -1,0 +1,119 @@
+// src/T1020761/entity/ConVật.java
+package T1020761.entity;
+
+public interface ConVật {
+  void kêu();
+}
+
+// src/T1020761/entity/ConVậtFactory.java
+package T1020761.entity;
+
+public abstract class ConVậtFactory {
+  abstract public ConVật getConVật();
+
+  public void hello() {
+    System.out.println("I'm an implemented method");
+  }
+
+  protected int someAttribute;
+}
+
+// src/T1020761/entity/Gà.java
+package T1020761.entity;
+
+public class Gà implements ConVật {
+  @Override
+  public void kêu() {
+    System.out.println("ò ó o");
+  }
+}
+
+// src/T1020761/entity/GàFactory.java
+package T1020761.entity;
+
+public class GàFactory extends ConVậtFactory {
+  @Override
+  public ConVật getConVật() {
+    return new Gà();
+  }
+}
+
+// src/T1020761/entity/Mèo.java
+package T1020761.entity;
+
+public class Mèo implements ConVật {
+  @Override
+  public void kêu() {
+    System.out.println("meo meo");
+  }
+}
+
+// src/T1020761/entity/MèoFactory.java
+package T1020761.entity;
+
+public class MèoFactory extends ConVậtFactory {
+  @Override
+  public ConVật getConVật() {
+    return new Mèo();
+  }
+}
+
+// src/T1020761/entity/Chó.java
+package T1020761.entity;
+
+public class Chó implements ConVật {
+  @Override
+  public void kêu() {
+    System.out.println("gâu gâu");
+  }
+}
+
+// src/T1020761/entity/ChóFactory.java
+package T1020761.entity;
+
+public class ChóFactory extends ConVậtFactory {
+  @Override
+  public ConVật getConVật() {
+    return new Chó();
+  }
+}
+
+// src/T1020761/entity/Client.java
+package T1020761.entity;
+
+public class Client {
+  public static void testFactoryMethod() {
+    ConVật x;
+    ConVậtFactory f;
+
+    // f = new MèoFactory();
+    // f = new ChóFactory();
+    f = new GàFactory();
+
+    x = f.getConVật();
+    x.kêu();
+  }
+
+  public static void main(String[] args) {
+    testFactoryMethod();
+  }
+}
+
+// src/T1020761/entity/ChuongTrinh.java
+package T1020761.entity;
+
+public class ChuongTrinh {
+	static void testFactoryMethod() {
+		ConVật x;
+		ConVậtFactory f;
+
+		// 2. Tạo đối tượng
+		x = (new GàFactory()).getConVật();
+
+		x.kêu();
+	}
+
+	public static void main(String[] args) {
+		testFactoryMethod();
+	}
+}

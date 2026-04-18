@@ -1,14 +1,14 @@
 package com.example.qlsv.dao;
 
-import com.example.qlsv.config.DatabaseConnection;
-import com.example.qlsv.entity.GiangVien;
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.qlsv.config.DatabaseConnection;
+import com.example.qlsv.entity.GiangVien;
 
 /**
  * DAO for GiangVien table.
