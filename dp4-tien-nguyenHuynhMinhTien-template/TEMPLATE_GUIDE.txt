@@ -1,0 +1,38 @@
+HUONG DAN SUA NHANH THEO MAU THIET KE
+
+1. Neu de ra DECORATOR
+- Dung package component + decorator.
+- Component la interface chung.
+- ConcreteComponent la doi tuong goc.
+- Decorator giu bien Component ben trong.
+- Moi phu kien/chuc nang moi se boc them vao object cu.
+
+Vi du:
+ThanhPhan obj = new DoiTuongGoc();
+obj = new ChucNangThem(obj);
+obj = new ChucNangThemKhac(obj);
+
+2. Neu de ra STRATEGY
+- Dung package strategy.
+- Tao interface ChienLuoc.
+- Moi thuat toan la mot class implements ChienLuoc.
+- Context giu bien ChienLuoc va goi execute().
+- Muon doi thuat toan thi setStrategy().
+
+3. Neu de ra STATE
+- Dung package state.
+- Tao interface TrangThai.
+- Moi trang thai la mot class.
+- Context giu bien TrangThai hien tai.
+- Khi hanh vi thay doi thi doi state.
+
+4. Neu de ra PROXY
+- Dung package proxy.
+- Tao interface Subject.
+- RealSubject lam viec that.
+- Proxy cung implements Subject, giu RealSubject ben trong.
+- Proxy dung de kiem tra quyen, lazy load, cache, log, gioi han truy cap.
+
+5. Nen giu luong chung:
+Main -> Service -> DAO -> Database
+Service la noi ap dung pattern.
