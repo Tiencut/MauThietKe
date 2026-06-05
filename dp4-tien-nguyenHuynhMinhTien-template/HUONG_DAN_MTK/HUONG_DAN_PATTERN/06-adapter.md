@@ -58,6 +58,14 @@ class Adapter implements Target {
         adaptee.specificRequest();
     }
 }
+
+class Client {
+    public static void main(String[] args) {
+        Adaptee adaptee = new Adaptee();
+        Target adapter = new Adapter(adaptee);
+        adapter.request();
+    }
+}
 ```
 
 ## Ví dụ đề thi

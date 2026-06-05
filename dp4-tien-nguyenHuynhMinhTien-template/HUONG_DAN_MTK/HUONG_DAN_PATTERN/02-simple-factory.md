@@ -56,8 +56,10 @@ class ProductB implements Product {
 
 class ProductFactory {
     public static Product create(String type) {
-        if ("A".equalsIgnoreCase(type)) return new ProductA();
-        if ("B".equalsIgnoreCase(type)) return new ProductB();
+        if ("A".equalsIgnoreCase(type)) 
+            return new ProductA();
+        if ("B".equalsIgnoreCase(type)) 
+            return new ProductB();
         throw new IllegalArgumentException("Loại không hợp lệ");
     }
 }

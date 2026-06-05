@@ -59,6 +59,15 @@ class ContextState {
         state.handle(this);
     }
 }
+
+class Main {
+    public static void main(String[] args) {
+        ContextState context = new ContextState();
+        State stateA = new TrangThaiA();
+        context.setState(stateA);
+        context.request(); // Output: Đang ở trạng thái A
+    }
+}
 ```
 
 ## Ví dụ đề thi

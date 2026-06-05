@@ -36,3 +36,19 @@ obj = new ChucNangThemKhac(obj);
 5. Nen giu luong chung:
 Main -> Service -> DAO -> Database
 Service la noi ap dung pattern.
+
+6. Neu de ra SIMPLE FACTORY
+- Dung package factory hoac simplefactory.
+- Tao interface chung cho san pham/doi tuong can tao.
+- Moi doi tuong cu the la mot class implements interface do.
+- Factory chua logic tao object, thuong la method static createX(String type).
+- Client chi goi factory de lay object, khong new truc tiep.
+- Neu them loai moi, can them class moi va sua factory (if/switch).
+
+Vi du:
+Shape shape = SimpleFactory.createShape("CIRCLE");
+shape.draw();
+
+7. Nen giu luong chung voi SIMPLE FACTORY:
+Main -> Factory -> Object
+Factory la noi ap dung logic chon va tao doi tuong.

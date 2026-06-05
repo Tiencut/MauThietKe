@@ -76,7 +76,33 @@ class FolderItem implements FileSystemItem {
         }
     }
 }
+
+class Client {
+    public static void main(String[] args) {
+        FolderItem root = new FolderItem("Root");
+        FileItem file1 = new FileItem("File1.txt");
+        FileItem file2 = new FileItem("File2.txt");
+
+        FolderItem subFolder = new FolderItem("SubFolder");
+        FileItem file3 = new FileItem("File3.txt");
+
+        root.add(file1);
+        root.add(file2);
+        subFolder.add(file3);
+        root.add(subFolder);
+
+        root.show();
+    }
+}
 ```
+
+Kết quả khi chạy:
+Root
+File1.txt
+File2.txt
+SubFolder
+File3.txt
+
 
 ## Ví dụ đề thi
 - Cây thư mục sản phẩm.

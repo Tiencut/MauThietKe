@@ -1,0 +1,4 @@
+SV001, Nguyễn, Văn A, 8.5
+SV002, Trần, Thị B, 7.8
+SV003, Phạm, Hoàng C, 9.0
+SV004, Vũ, Minh D, 8.2

@@ -57,6 +57,18 @@ class ContextStrategy {
         strategy.execute();
     }
 }
+
+public class Main {
+    public static void main(String[] args) {
+        ContextStrategy context = new ContextStrategy();
+
+        context.setStrategy(new StrategyA());
+        context.execute(); // Chiến lược A
+
+        context.setStrategy(new StrategyB());
+        context.execute(); // Chiến lược B
+    }
+}
 ```
 
 ## Ví dụ đề thi

@@ -69,6 +69,16 @@ class DichVuProxy implements DichVu {
         realSubject.request();
     }
 }
+
+class Client {
+    public static void main(String[] args) {
+        DichVu proxy = new DichVuProxy("user");
+        proxy.request(); // Không đủ quyền
+
+        DichVu adminProxy = new DichVuProxy("admin");
+        adminProxy.request(); // Xử lý thật
+    }
+}
 ```
 
 ## Ví dụ đề thi

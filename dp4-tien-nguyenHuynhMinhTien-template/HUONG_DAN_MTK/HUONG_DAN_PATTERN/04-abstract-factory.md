@@ -62,8 +62,22 @@ abstract class GUIFactory {
 }
 
 class WinFactory extends GUIFactory {
-    public Button createButton() { return new WinButton(); }
-    public Checkbox createCheckbox() { return new WinCheckbox(); }
+    public Button createButton() { 
+        return new WinButton(); 
+    }
+    public Checkbox createCheckbox() { 
+        return new WinCheckbox(); 
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        GUIFactory factory = new WinFactory();
+        Button button = factory.createButton();
+        Checkbox checkbox = factory.createCheckbox();
+        button.paint();
+        checkbox.paint();
+    }
 }
 ```
 
